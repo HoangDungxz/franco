@@ -1,0 +1,160 @@
+
+// begin footer
+.footer{
+	width: 100%;
+	background-color: rgba(34,34,34);
+	@media @phone-strict{
+		text-align: center;
+	}
+	p{
+		color: #888888;
+	}
+	hr{
+		border: 1px solid #393939;
+		margin: 0 0 22px 0;
+	}
+	.footer-body{
+		padding-top: 33px;
+		.footer-about{
+			.footer-about_body{
+				width: 72%;
+				@media @phone-strict{
+					width: 100%;
+				}
+			}
+			p{
+				&:first-child{
+					.mont-re(16px);
+					padding: 25px 0;
+					letter-spacing: 0.8px;
+					color: #fff;
+				}
+				&:nth-child(3){
+					.opens-re(14px);
+					letter-spacing: 0.3px;
+					line-height: 22px;
+					text-align: left;
+				}
+			}
+			ul{
+				list-style: none;
+				padding: 40px 0 30px 0;
+				li{
+					display: inline-block;
+					padding-right: 28px;
+					@media @phone-strict{
+						padding: 20px;
+						font-size: 20px;
+					}
+					a{
+						color: #888888;
+						text-decoration: none;
+
+					}
+				}
+			}
+		}
+		.footer-navigation{
+			.footer-navigation_main{
+				width: 80%;
+				@media @phone-strict{
+					width: 100%;
+				}
+				p{
+					.mont-re(16px);
+					padding: 25px 0;
+					letter-spacing: 0.8px;
+					&:first-child{
+						color: #fff;
+					}
+				}
+				.footer-navigation_body{
+					display: grid;
+					grid-template-columns: 4.4fr 3fr;
+					@media @phone-strict{
+						grid-template-columns: 1fr 1fr;
+					}
+					width: 90%;
+					@media @phone-strict{
+						width: 100%;
+					}
+					ul{
+						list-style: none;
+						li{
+							padding-bottom: 6px;
+							a{
+
+								color: #888888;
+								letter-spacing: -0.4px;
+								&:hover{
+									color: white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer-location{
+			.footer-location_main{
+				.footer-location_head{
+					.mont-re(16px);
+					padding: 25px 0;
+					letter-spacing: 0.8px;
+					p{
+						color: #fff;
+					}
+				}		
+				.footer-location_body{
+					.opens-re(14px);
+					margin-top: 10px;
+					p{  
+						transform: translateX(2px) translateY(-2px);
+						@media @phone-strict{
+							padding-right: 0;
+						}
+						line-height: 31px;
+						i{
+							margin-right: 12px;
+						}
+						span{
+							margin-left: 31px;
+							@media @phone-strict{
+								margin-left: 0;
+							}
+						}
+						&:not(:first-child){
+							margin-top: 4px;
+							i{
+								margin-right: 15px;
+							}
+						}
+					}
+				}
+			}
+
+		}
+	}
+	.footer-footer{
+		overflow: hidden;
+		padding-bottom: 30px;
+		margin-top: -5px;
+		.footer-footer_copy{
+			width: 50%;
+			float: left;
+			letter-spacing: -0.6px;
+			i{
+				color: red;
+			}
+			span{
+				color: #fff;
+			}
+		}
+		.footer-footer_pay{
+			img{
+				float: right;
+			}
+		}
+	}
+}
+// end footer
