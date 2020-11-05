@@ -1,13 +1,18 @@
 // reponsive
 // 
-@screen-xxs-min:    320px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,900;1,700;1,800&family=Open+Sans:wght@400;600&family=Pacifico&display=swap');
+@screen-xxs-min:    200px;
 @screen-xs-min:     480px;
 @screen-sm-min:     600px;
 @screen-md-min:     1028px;
 @screen-lg-min:     1280px;
 
-@screen-boostrap-md: 991px;
+
+@screen-boostrap-md: 1027px;
 @screen-boostrap-sm: 768px;
+@screen-boostrap-mdmin: 992px;
+
+@screen-boostrap-xs-max: 575px;
 
 @screen-xxs-max:    (@screen-xs-min - 1);
 @screen-xs-max:     (@screen-sm-min - 1);
@@ -16,17 +21,32 @@
 
 @phone-min:         ~"only screen and (min-width: @{screen-xxs-min})";
 @phone-min-strict:  ~"only screen and (max-width: @{screen-xxs-max})";
+
+
 @phone:             ~"only screen and (min-width: @{screen-xs-min})";
 @phone-strict:      ~"only screen and (max-width: @{screen-xs-max})";
+
+@phone-fix:         ~"only screen and (max-width: 767px) and (min-width: @{screen-xs-min})";
+
 @tablet:            ~"only screen and (min-width: @{screen-sm-min})";
 @tablet-strict:     ~"only screen and (max-width: @{screen-sm-max})";
 @desktop:           ~"only screen and (min-width: @{screen-md-min})";
 @desktop-strict:    ~"only screen and (max-width: @{screen-md-max})";
 @large:             ~"only screen and (min-width: @{screen-lg-min})";
 
+@fixnavbtn:         ~"only screen and (max-width: 1027px) and (min-width: 992px)";
+@fixbanner2:        ~"only screen and (max-width: 360px)";
+@fixowlbody:        ~"only screen and (max-width: 767px) and (min-width: 480px)";       ;
 
-@desktop-bootstrap: ~"only screen and (min-width: @{screen-boostrap-md})";
-@tablet-bootstrap: ~"only screen and (min-width: @{screen-boostrap-sm})";
+
+@desktop-bootstrap:       ~"only screen and (min-width: @{screen-boostrap-md})";
+@desktop-bootstrap-min:   ~"only screen and (min-width: @{screen-boostrap-mdmin)";
+
+@tablet-bootstrap:        ~"only screen and (min-width: @{screen-boostrap-sm})";
+@tablet-bootstrap-strict: ~"only screen and (max-width: @{screen-boostrap-sm})";
+@phone-bootstrap-strict:  ~"only screen and (max-width: @{screen-boostrap-xs-max})";
+
+
 
 
 
@@ -46,68 +66,9 @@
 }
 
 
-// set font-face 
-.font-face(@font-family){
-	@font-face {
-		font-family: @font-family;
-		src: url('../fonts/@{font-family}.ttf');
-	}
-}
-
-.font-face(Montserrat-Regular);
-.mont-re(@size: 14px){
-	font-family: Montserrat-Regular;
-	font-size: @size;
-}
-.font-face(Montserrat-Medium);
-.mont-me(@size: 14px){
-	font-family: Montserrat-Medium;
-	font-size: @size;
-}
-.font-face(Montserrat-SemiBold);
-.mont-sebold(@size: 14px){
-	font-family: Montserrat-SemiBold;
-	font-size: @size;
-}
-
-.font-face(Montserrat-Bold);
-.mont-bold(@size: 14px){
-	font-family: Montserrat-Bold;
-	font-size: @size;
-}
-.font-face(Montserrat-ExtraBold);
-.mont-exbold(@size: 14px){
-	font-family: Montserrat-ExtraBold;
-	font-size: @size;
-}
-.font-face(Montserrat-Black);
-.mont-black(@size: 14px){
-	font-family: Montserrat-Black;
-	font-size: @size;
-}
-
-.font-face(OpenSans-Regular);
-.opens-re(@size: 14px){
-	font-family: OpenSans-Regular;
-	font-size: @size;
-}
-
-.font-face(OpenSans-Bold);
-.opens-bold(@size: 14px){
-	font-family: OpenSans-Bold;
-	font-size: @size;
-}
 
 
-.font-face(Pacifico-Regular);
-.pacif-re(@size: 14px){
-	font-family: Pacifico-Regular;
-	font-size: @size;
-}
-
-// end set font-face 
-// 
-// 
+ 
 // // center vetical
 .flex-item-center{
 	display: flex;

@@ -8,11 +8,14 @@ body{
 }
 .welcome{
 	.flex-item-center;
-	.opens-re;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 14px;
 	height: 45px;
 	background: @black;
 	color: #FFF;
 	overflow: hidden;
+	justify-content: space-between;
 	@media @phone-min {
 		display: block;
 		height: auto;
@@ -100,10 +103,13 @@ body{
 					padding: 19px;
 					a{
 						color: #222;
-						.mont-exbold(14px);
+						font-family: 'Montserrat', sans-serif;
+						font-weight: 700;
+						font-size: 14px;
 						text-transform: uppercase;
 						letter-spacing: 0.1px;
 						font-weight: bold;
+						transform: translate(-2px, -1px);
 						&:hover{
 							color: @violet;
 						};
@@ -139,6 +145,7 @@ body{
 					width: 100%;
 					text-align: right;
 				}
+
 				a{
 					@media @phone-min {
 						padding: 13px 5px;
@@ -147,7 +154,12 @@ body{
 						padding: 13px;
 					}
 
+
 				}
+			}
+			@media @fixnavbtn{
+				flex: 0 0 100% !important;
+				max-width: 100% !important;
 			}
 		}
 		.header-nav_collapsebnt{
@@ -180,7 +192,7 @@ body{
 	background-color: #222;
 	padding: 40px;
 	display: none;
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 	z-index: 9999;
 	overflow: scroll;
@@ -191,7 +203,9 @@ body{
 		li{
 			a{
 				color: #fff;
-				.mont-exbold(14px);
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 14px;
 				text-transform: uppercase;
 				letter-spacing: 0.1px;
 				&:hover{
